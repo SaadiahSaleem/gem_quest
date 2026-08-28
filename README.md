@@ -1,17 +1,38 @@
-# gem_quest
+# Gem Quest
 
-A new Flutter project.
+Gem Quest is a polished match-3 puzzle game built with Flutter. It is playable in the browser and can be deployed to GitHub Pages with one workflow.
 
-## Getting Started
+## Play locally
 
-This project is a starting point for a Flutter application.
+```bash
+flutter pub get
+flutter run -d chrome
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Build for web
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```bash
+flutter build web --release --base-href "/gem_quest/"
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If your GitHub repository has a different name, replace `gem_quest` with your repo name.
+
+## Deploy to GitHub Pages
+
+1. Push this repo to GitHub.
+2. In the repository settings, open Pages.
+3. Set Source to "GitHub Actions".
+4. The workflow in `.github/workflows/deploy-pages.yml` will build the web app and publish it automatically on every push to `main`.
+
+The live URL will look like:
+
+```text
+https://<your-username>.github.io/gem_quest/
+```
+
+## Gameplay
+
+- Match 3 or more gems to score points.
+- Build combos for bigger rewards.
+- Trigger special gems and clear more of the board.
+- Reach the target before your moves run out.
